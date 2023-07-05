@@ -144,6 +144,14 @@ console.log(femaleCharacters);
   Ad ognuna di queste proprietà assegna come valore un array vuoto.
 */
 
+const eyeColor = {
+  blue: [],
+  yellow: [],
+  brown: [],
+  red: [],
+  "blue-gray": [],
+};
+
 //____________________________________________________________
 
 /* ESERCIZIO 5
