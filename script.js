@@ -130,13 +130,12 @@ const femaleCharacters = [];
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "female") {
-    femaleCharacters.push(starWarsCharacters[i].name);
-  } else {
-    continue;
+    femaleCharacters.push(starWarsCharacters[i]);
   }
 }
 
 console.log("Array personaggi femmine.\n", femaleCharacters);
+
 //____________________________________________________________
 
 /* ESERCIZIO 4
@@ -274,8 +273,6 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 for (let i = 0; i < NewStarWarsCharacters.length; i++) {
   if (NewStarWarsCharacters[i].gender === "n/a") {
     NewStarWarsCharacters[i].gender = "robot";
-  } else {
-    continue;
   }
 }
 
@@ -290,6 +287,23 @@ console.log(
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "characters" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "characters" prima e dopo l'operazione.
 */
+
+// console.log(characters);
+console.log(characters.length);
+
+// let myArr = characters.concat(femaleCharacters);
+// console.log(myArr);
+
+for (let i = 0; i < femaleCharacters.length; i++) {
+  for (let h = 0; h < characters.length; h++) {
+    if (femaleCharacters[i].name === characters[h]) {
+      characters.splice(h, 1);
+    }
+  }
+}
+
+console.log(characters.length);
+// console.log(characters);
 
 //____________________________________________________________
 
