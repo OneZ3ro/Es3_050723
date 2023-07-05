@@ -204,6 +204,7 @@ console.log(`Ciclo while.\nLa massa totale dell'equipaggio è: ${crewMass}`);
 // console.log(`Ciclo for.\nLa massa totale dell'equipaggio è: ${crewMass}`);
 
 //____________________________________________________________
+
 /* ESERCIZIO 7
   Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
 
@@ -212,9 +213,51 @@ console.log(`Ciclo while.\nLa massa totale dell'equipaggio è: ${crewMass}`);
   Se la massa è superiore a 700 stampa in console: "Warning: Load is over 700"
   Se la massa è superiore a 900 stampa in console: "Critical Load: Over 900"
   Se la massa è superiore a 1000 stampa in console: "DANGER! OVERLOAD ALERT: escape from ship now!"
-
+  
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
+
+// Con una variabile che cambiamo a mano
+// let massa_carico = 499;
+
+// if (massa_carico < 500) {
+//   console.log(`Mass: ${massa_carico}. Ship is under loaded`);
+// } else if (massa_carico >= 500 && massa_carico < 700) {
+//   massa_carico = massa_carico + starWarsCharacters[i].mass;
+//   console.log(`Mass: ${massa_carico}. Ship is half loaded`);
+// } else if (massa_carico >= 700 && massa_carico < 900) {
+//   massa_carico = massa_carico + starWarsCharacters[i].mass;
+//   console.log(`Mass: ${massa_carico}. Warning: Load is over 700`);
+// } else if (massa_carico >= 900 && massa_carico < 1000) {
+//   console.log(`Mass: ${massa_carico}. Critical Load: Over 900`);
+// } else if (massa_carico >= 1000) {
+//   console.log(
+//     `Mass: ${massa_carico}. DANGER! OVERLOAD ALERT: escape from ship now!`
+//   );
+// }
+
+// Con l'array starWarsCharacters
+
+const warnings = [];
+let carMass = null;
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  carMass = carMass + starWarsCharacters[i].mass;
+  if (carMass < 500) {
+    warnings.push(`Mass: ${carMass}. Ship is under loaded`);
+  } else if (carMass >= 500 && carMass < 700) {
+    warnings.push(`Mass: ${carMass}. Ship is half loaded`);
+  } else if (carMass >= 700 && carMass < 900) {
+    warnings.push(`Mass: ${carMass}. Warning: Load is over 700`);
+  } else if (carMass >= 900 && carMass < 1000) {
+    warnings.push(`Mass: ${carMass}. Critical Load: Over 900`);
+  } else if (carMass >= 1000) {
+    warnings.push(
+      `Mass: ${carMass}. DANGER! OVERLOAD ALERT: escape from ship now!`
+    );
+  }
+}
+// console.log("Warnings:\n", warnings);
+console.log(warnings[warnings.length - 1]);
 
 //____________________________________________________________
 
