@@ -126,6 +126,17 @@ console.log(characters);
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
 */
 
+const femaleCharacters = [];
+
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender === "female") {
+    femaleCharacters.push(starWarsCharacters[i].name);
+  } else {
+    continue;
+  }
+}
+
+console.log(femaleCharacters);
 //____________________________________________________________
 
 /* ESERCIZIO 4
