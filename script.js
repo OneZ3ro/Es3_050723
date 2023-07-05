@@ -119,7 +119,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
   characters.push(starWarsCharacters[i].name);
 }
 
-console.log(characters);
+console.log("Array personaggi.\n", characters);
 //____________________________________________________________
 
 /* ESERCIZIO 3
@@ -136,7 +136,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
   }
 }
 
-console.log(femaleCharacters);
+console.log("Array personaggi femmine.\n", femaleCharacters);
 //____________________________________________________________
 
 /* ESERCIZIO 4
@@ -179,13 +179,29 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
   }
 }
 
-console.log(eyeColor);
+console.log("Array colore occhi.\n", eyeColor);
 
 //____________________________________________________________
 
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
+
+let crewMass = null;
+
+//con il while
+let j = 0;
+while (starWarsCharacters.length > j) {
+  crewMass = crewMass + starWarsCharacters[j].mass;
+  j++;
+}
+console.log(`Ciclo while.\nLa massa totale dell'equipaggio è: ${crewMass}`);
+
+//con il for
+// for (let i = 0; i < starWarsCharacters.length; i++) {
+//   crewMass = crewMass + starWarsCharacters[i].mass;
+// }
+// console.log(`Ciclo for.\nLa massa totale dell'equipaggio è: ${crewMass}`);
 
 //____________________________________________________________
 /* ESERCIZIO 7
