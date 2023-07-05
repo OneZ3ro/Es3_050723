@@ -115,6 +115,11 @@ const characters = [];
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
 
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  characters.push(starWarsCharacters[i].name);
+}
+
+console.log(characters);
 //____________________________________________________________
 
 /* ESERCIZIO 3
